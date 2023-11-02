@@ -1,0 +1,74 @@
+* {
+  font-family: "Roboto", sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.main {
+  background: #ededed;
+}
+.main .bottom {
+  background: #e3dbd9;
+  position: relative;
+}
+.main .bottom::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 24%;
+  height: 100%;
+  background-image: url("../images/small-left.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+@media (min-width: 768px) {
+  .main .bottom::before {
+    background-image: url("../images/large-left.png");
+    background-size: contain;
+    width: 23%;
+  }
+}
+.main .bottom::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 35%;
+  height: 100%;
+  background-image: url("../images/small-right.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+@media (min-width: 768px) {
+  .main .bottom::after {
+    background-image: url("../images/medium-right.png");
+    background-size: contain;
+    width: 20%;
+  }
+}
+@media (min-width: 1024px) {
+  .main .bottom::after {
+    background-image: url("../images/large-right.png");
+    background-size: contain;
+    width: 40%;
+  }
+}
+.main .bottom__content {
+  position: relative;
+  z-index: 5;
+}
+.main .bottom__btn {
+  width: 100%;
+  color: #fff;
+  font-weight: 500;
+  padding: 1rem;
+  border-radius: 10px;
+  display: block;
+}
+.main .bottom__btn--pink {
+  background: #ff176b;
+}
+.main .bottom__btn--dark {
+  background: #1a1a1a;
+}/*# sourceMappingURL=main.css.map */

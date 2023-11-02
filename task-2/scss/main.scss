@@ -1,0 +1,81 @@
+@import "./variables";
+@import "./mixins";
+
+* {
+  font-family: "Roboto", sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.main {
+  background: $pageBG;
+
+  .bottom {
+    background: $sectionBG;
+    position: relative;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 24%;
+      height: 100%;
+      background-image: url("../images/small-left.png");
+      background-repeat: no-repeat;
+      background-size: cover;
+
+      @include screen-md {
+        background-image: url("../images/large-left.png");
+        background-size: contain;
+        width: 23%;
+      }
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 35%;
+      height: 100%;
+      background-image: url("../images/small-right.png");
+      background-repeat: no-repeat;
+      background-size: cover;
+
+      @include screen-md {
+        background-image: url("../images/medium-right.png");
+        background-size: contain;
+        width: 20%;
+      }
+
+      @include screen-lg {
+        background-image: url("../images/large-right.png");
+        background-size: contain;
+        width: 40%;
+      }
+    }
+
+    &__content {
+      position: relative;
+      z-index: 5;
+    }
+
+    &__btn {
+      width: 100%;
+      color: #fff;
+      font-weight: 500;
+      padding: 1rem;
+      border-radius: 10px;
+      display: block;
+
+      &--pink {
+        background: $pinkBTN;
+      }
+
+      &--dark {
+        background: $darkBTN;
+      }
+    }
+  }
+}

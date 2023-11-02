@@ -1,0 +1,27 @@
+// Extra small devices (phones, 768px)
+@mixin screen-md {
+  @media (min-width: 768px) {
+    @content;
+  }
+}
+
+// Extra small devices (phones, 1024px)
+@mixin screen-lg {
+  @media (min-width: 1024px) {
+    @content;
+  }
+}
+
+// Extra small devices (phones, 1200px)
+@mixin screen-xl {
+  @media (min-width: 1280px) {
+    @content;
+  }
+}
+
+// Extra small devices (phones, 1536px)
+@mixin screen-2xl {
+  @media (min-width: 1536px) {
+    @content;
+  }
+}
